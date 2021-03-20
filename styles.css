@@ -1,0 +1,239 @@
+:root {
+  --font-Nexatext: 'Nexatext';
+  --font-Nexa: "Nexa";
+}
+
+* {
+  box-sizing: border-box;
+  color:#0a0a0a;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration:none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E1E2E5;
+  min-width: 220px;
+  overflow: scroll;
+  font-weight: 200;
+  font-family: var(--font-Nexatext);
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aaa;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.smooth, .smooth:before {
+  transition : .4s;
+}
+
+input:checked+.slider {
+  background-color: #2d9bf0;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2d9bf0;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.name {
+  display: table-cell;
+  width: 190px;
+  vertical-align: middle;
+}
+
+.toggle {
+  display: table;
+  height: 25px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+#power-button {
+  width: 150px;
+}
+
+#master-toggle {
+  transition: 0.6s;
+  margin: 10px auto;
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius:100%;
+  cursor: pointer;
+}
+
+.on{
+  box-shadow: 0px 0px 0px #2d9bf0;
+  background-image: url("/icons/pw_On.png");
+}
+.off{
+  background-image: url("/icons/pw_Off.png");
+  box-shadow: 0px 0px 6px #FFF
+}
+.on:hover{
+  box-shadow: 0px 0px 4px #4f85a3;
+}
+.off:hover{
+  box-shadow: 0px 0px 2px #6d6d6d;
+}
+
+
+.tab {
+  float: left;
+  width: 33.33%;
+  padding: 0 10px;
+  height: 35px;
+  text-align: center;
+}
+
+#tabs {
+  width: 100%;
+  border-bottom: 1px #cccccc solid;
+}
+
+#tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section {
+  width:100%;
+  padding:10px 0;
+}
+
+.lines {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 5%, rgb(255, 255, 255, 1) 30%, rgb(255, 255, 255, 1) 70%, rgba(255, 255, 255, 0) 95%);
+    width: 100%;
+    height: 1px;
+    margin: 2px 0;
+}
+
+h3, h4{
+  font-weight: 200;
+  text-align: center;
+  margin: 0;
+}
+h4 {font-size:13px;}
+h3 {font-size:15px;}
+
+#container {
+  height: 56px;
+  margin: 8px 0;
+}
+#unified {
+  margin: 0;
+  text-align: center;
+  color: #2d9bf0;
+  pointer-events: none;
+  font-size: 56px;
+  font-family: var(--font-Nexa);
+  font-weight: 200;
+  line-height: 56px;
+}
+
+#button-container {
+  margin:auto;
+  width:140px;
+}
+
+#view-dashboard {
+  background-color: #2d9bf0;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 13px;
+  color: #f1f1f1;
+  padding: 10px 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#view-dashboard:hover {
+  cursor:pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    color:#f1f1f1;
+  }
+  body {
+    background-color:#292a2d;
+  }
+  .lines {
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0) 5%, rgb(200, 200, 200, 1) 30%, rgb(200, 200, 200, 1) 70%, rgba(200, 200, 200, 0) 95%);
+  }
+  .off {
+    box-shadow: 0px 0px 6px #2c2d2f;
+    background-image: url("/icons/pw_Off_dark.png");
+  }
+  .off:hover{
+    box-shadow: 0px 0px 6px #585858;
+  }
+}

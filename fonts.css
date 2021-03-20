@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Nexa";
+    src: url("fonts/nexa-light-webfont.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nexatext";
+    src: url("fonts/nexatext-light-webfont.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+}

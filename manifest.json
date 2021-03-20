@@ -1,0 +1,32 @@
+  {
+    "name": "Breeze Master Extension",
+    "version": "0.1.2",
+    "manifest_version": 2,
+    "permissions": [
+      "storage",
+      "tabs",
+      "management",
+      "browsingData"
+    ],
+    "browser_action": {
+      "default_popup": "popup.html"
+    },
+    "key":"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC/hihu173ctThYAjv9SD7n/AOkRZ7UDkRkl2jBiEHNCfM9M8/P9svD8MelCArNpHES1i+XFXDCNgZoTLRd9JsN5bk1tlvOeL82GKC0DOCzTUDtjZkjAhyBE0tMkRMNyk6+4zvSxZAYcotCzHuWkVxgr3rvX0bNfDVVtmnfN+XnLKhjwm3cJI4d4fhTvZAndNGA26zxV8N8wKDINKa56qEAYYdPy2LTN+7NEcV58b0TLqtbqJZStO571qFUuh+5zI52UIK8ee7Y+tbzho1vH9Rhg9L0RQYat04j4xr7YFnJp2cXnIpLw4DwT7sK20lph/nOl2hCNadevSZb2zSMD8BVAgMBAAECggEAPb85/+psWuDOJomp35HQPiig3/BWMZXb9PZfnq2YUUuY8S1oHWs67JQPOaSrHvuaPPFy7GnMLcEPNcctC3GWH9fla2y8koeZVg6AmSvhsc0BVtUk/wVqPS8EQs4u724/DwnhuqVZPJiJT2LvoW6B8uYAY3Y7NHqME3M5FO9HnszWn9nsS+8/MO8CzXTykHRaNpDcfSw8OrvUBgRn8bFSuqm4GlIqdnf5GgLNEQb2IAO5YE9/RIAgTW1EQ+k0mUN024YHn2qxKREFPuT+SGU49hlBAHQzHu00p35nn6UhF9R9cccXyolMo2Iw7l8XLK9XBVQKClG520/9N7jvG6+vbQKBgQDzTFn0hkJI2lHbF/4Bt7zqvcSpEIXg3wdX4MAMsD6g27c5sU2j2iIrmTFtNj9HV28aVYZiRKvUV5j26jfWSRiKFiAcuSmHRBhwskaqvwQi9aUCYn79e0jtjEPdjkg59u30hLjnpsixO6moN1I0gQWaTVAj5Lb6NV3g/GN/N5fdowKBgQDJhdnzeqZFNpiowZKz2Iwka/Ax1X6koXqiuOaBUeFawmL0YkiF1o+knzauzKHiH7UhPam5+To/SF0yBEe2M0lJDLwt+IboYMuX3wJ9x9+tjW3hO4dyg/jkn99R/6QORHmUndwd0hlLECCAnXkw3/L4mGUkCQZKCizZhPPsklXZpwKBgBAvnCxwYiiGnbt9tSBYIPFc/qBgwQdczxhBk4VElGYPN/lWmlu0P2G3J1qkqUENyA5wcihHeUb/LOYAXwaahk9peWlvyBt/pECbG6hwXM4WmYu3Ecu7T/a9xiYPOS7iBqKl0cdXiTKBTaArTgTAMKc7TYGVzbaHpl85a0UjZa8RAoGAEWkNAWoRP12OJtZCdGM7CFKC9+s3+8UvsStETtviGlM89VwgY9+7nT9cHBH10nFm1q5bIYQUsi7wTkfsYiNgK318LISSMzVZoY9UycUg3/+eBJ1+ADjCog3l31G0vL7RujNBNxpVsRR9ml8Af2Z5uVyBMHHPJ0plwY0o/cFOxXUCgYEA63snzhusKiSK6D0BcMIcJ4DDnAw2/3zlyqBuzp51XnYBSHA9HXwzsOKe4ONOu9KnTyVWnOUl0+dhtZ/jTeU9VYVELUeszKHllg1IZkMLMxmDqLKSP7QKK8T2WrgzH+qthlRyEfvZcPWcRmpL9gGTCZd1qB+m7NzZDUfgOitlKq4=",
+    "icons": {
+      "128": "/icons/shield128.png",
+      "48":  "/icons/shield48.png",
+      "32":  "/icons/shield32.png",
+      "16":  "/icons/shield16.png"
+    },
+    "background": {
+      "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+      "all_frames": false,
+      "matches": ["http://*/*","https://*/*"],
+      "match_about_blank": false,
+      "run_at": "document_start",
+      "js": ["cs.js"]
+    }],
+    "incognito" : "split"
+  }
